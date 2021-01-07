@@ -1,0 +1,62 @@
+﻿<Window x:Class="Secundomer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Secundomer"
+        mc:Ignorable="d"
+        Title="Секундомер" Height="217.5" Width="425" Foreground="Black" BorderBrush="Black" Icon="1603212025993.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFE64A4A" Offset="1"/>
+            <GradientStop Color="#FF491717" Offset="0.239"/>
+            <GradientStop Color="#FFBC3C3C" Offset="0.8"/>
+            <GradientStop Color="#FFC23E3E" Offset="0.83"/>
+            <GradientStop Color="#FFBD3C3C" Offset="0.996"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="9"/>
+            <ColumnDefinition Width="106*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="button1" Content="Start" HorizontalAlignment="Center" Margin="60,43,65,0" VerticalAlignment="Top" Width="90" Click="Button_Start_Click" Height="35"/>
+        <Button Content="Stop" HorizontalAlignment="Left" Margin="55,42,0,0" Width="90" Click="Button_Stop_Click" Grid.ColumnSpan="5" Height="35" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Grid.Column="1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.322"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="lables" Content="0:0:0" HorizontalAlignment="Left" Height="32" Margin="166,128,0,0" VerticalAlignment="Top" Width="71" Background="White" FontWeight="Bold" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" FontSize="18">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.25"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="107" Margin="7,79,0,0" VerticalAlignment="Top" Width="103" Source="kronometer_001.png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="19.729"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+    </Grid>
+</Window>
